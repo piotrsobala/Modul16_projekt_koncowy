@@ -1,7 +1,7 @@
 # blog/models.py
 
 from blog import db  # Import the initialized db instance from __init__.py
-
+from datetime import datetime
 
 class Entry(db.Model):
     id = db.Column(db.Integer, primary_key=True)

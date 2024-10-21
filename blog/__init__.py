@@ -10,7 +10,8 @@ from datetime import datetime  # Add this import
 
 app = Flask(__name__)
 app.config.from_object(Config)
-db = SQLAlchemy(app)  # Initialize db
+app.secret_key = 'bardzo-tajny-klucz'
+db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from blog import routes, models  # Import routes and models after initializing db
